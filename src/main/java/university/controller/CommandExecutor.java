@@ -33,7 +33,7 @@ public class CommandExecutor {
         Session session = SessionProvider.getSessionFactory().getCurrentSession();
         session.getTransaction().begin();
         String head = (String) session
-                .createSQLQuery("SELECT head_of_department FROM Department WHERE department_name=:name")
+                .createQuery("SELECT headOfDepartment FROM Department WHERE departmentName=:name")
                 .setParameter("name", inputName)
                 .uniqueResult();
         if (!head.equals(null)) {
