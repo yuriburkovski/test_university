@@ -39,6 +39,7 @@ public class SetupDB {
         session.persist(departmentEcon);
         session.persist(departmentMath);
         session.persist(departmentPhil);
+
         session.getTransaction().commit();
     }
 }

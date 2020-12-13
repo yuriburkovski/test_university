@@ -18,7 +18,7 @@ public class Lector implements Serializable {
     @Enumerated(EnumType.STRING)
     private LectorDegree degree;
     @Column(name = "salary")
-    private Integer salary;
+    private int salary;
 
     @ManyToMany(mappedBy = "lectors")
     private Set<Department> departments = new HashSet<>();
@@ -29,13 +29,13 @@ public class Lector implements Serializable {
     public Lector(Lector lector) {
     }
 
-    public Lector(String name, LectorDegree degree, Integer salary) {
+    public Lector(String name, LectorDegree degree, int salary) {
         this.name = name;
         this.degree = degree;
         this.salary = salary;
     }
 
-    public Lector(String name, LectorDegree degree, Integer salary, Set<Department> departments) {
+    public Lector(String name, LectorDegree degree, int salary, Set<Department> departments) {
         this.name = name;
         this.degree = degree;
         this.salary = salary;
@@ -62,11 +62,11 @@ public class Lector implements Serializable {
         this.degree = degree;
     }
 
-    public Integer getSalary() {
+    public int getSalary() {
         return salary;
     }
 
-    public void setSalary(Integer salary) {
+    public void setSalary(int salary) {
         this.salary = salary;
     }
 

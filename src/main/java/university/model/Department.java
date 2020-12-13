@@ -21,9 +21,9 @@ public class Department implements Serializable {
 
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinTable(
-                name = "DEPARTMENT_LECTOR",
-                joinColumns = {@JoinColumn(name = "department_id")},
-                inverseJoinColumns = {@JoinColumn(name = "lector_id")})
+            name = "DEPARTMENT_LECTOR",
+            joinColumns = {@JoinColumn(name = "department_id")},
+            inverseJoinColumns = {@JoinColumn(name = "lector_id")})
     private Set<Lector> lectors = new HashSet<>();
 
     public Department() {
